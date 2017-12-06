@@ -1,5 +1,15 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<nav>
+  <div class="nav-wrapper blue">
+    <center><a href="#!" class="brand-logo">Facturas</a></center>
+    <ul class="right hide-on-med-and-down">
+      <li>{{#link-to 'crear-factura'}}Crear Factura{{/link-to}}</li>
+      <li>{{#link-to 'lista-facturas'}}Lista Factura{{/link-to}}</li>
+    </ul>
+  </div>
+</nav>
 
-{{outlet}}
+<div class="conteiner">
+  <div class="card-panel">
+    {{outlet}}
+  </div>
+</div>

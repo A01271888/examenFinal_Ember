@@ -1,0 +1,27 @@
+<div class="conteiner">
+  <div class="row">
+    <h1>Lista de facturas</h1>
+  </div>
+  <div class="row">
+    <table class="ui celled table">
+      <thead>
+        <tr>
+          <th>Serie</th>
+          <th>Folio</th>
+          <th>Fecha</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |factura|}}
+        <tr>
+          <th>{{factura.serie}}</th>
+          <th>{{factura.folio}}</th>
+          <th>{{factura.fecha}}</th>
+          <th>{{factura.total}}</th>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

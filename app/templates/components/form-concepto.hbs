@@ -1,0 +1,27 @@
+<div class="conteiner">
+  <form>
+    <div class="row">
+      <div class="col s1">
+        <label>Cantidad</label>
+        {{input value=model.cantidad}}
+      </div>
+      <div class="col s5">
+        <label>Descripcion</label>
+        {{input value=model.descripcion}}
+      </div>
+      <div class="col s1">
+        <label>Precio</label>
+        {{input value=model.precio}}
+      </div>
+      <div class="col s1">
+        <label>Importe</label><br><br>
+        <p>${{model.importe}}</p>
+        <!-- {{input value=model.precio}} -->
+      </div>
+      <div class="col s1">
+        <label>Descuento</label>
+        {{input value=model.descuento}}
+      </div>
+    </div>
+  </form>
+</div>

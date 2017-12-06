@@ -1,0 +1,50 @@
+<div class="ui conteiner">
+  <form>
+    <h1>Nueva Factura</h1>
+    <div class="row">
+      <div class="col s3">
+        <label for="s">Serie</label>
+        {{input id="s" value=model.serie}}
+      </div>
+      <div class="col s3">
+        <label for="fo">Folio</label>
+        {{input id="fo" value=model.folio}}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s6">
+        <label for="fecha">Folio</label>
+        {{input id="fecha" type="date" value=model.fecha}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6">
+        <label for="fp">Forma Pago</label>
+        {{input id="fp" value=model.formaPago}}
+      </div>
+    </div>
+  </form>
+
+  <div class="conteiner">
+    <h2>Conceptos</h2>
+    {{#each model.conceptos as |concepto|}}
+      <div class="row">
+        {{form-concepto model=concepto}}
+      </div>
+    {{/each}}
+    <center><button class="waves-effect waves-light btn-large blue" {{action 'agregarConcepto'}}>Agregar concepto</button></center>
+  </div>
+
+  <div class="row">
+    <div class="right">
+      <div class="row">
+        <p>Subtotal: ${{model.subtotal}}</p>
+        <p>Total: ${{model.total}}</p>
+      </div>
+      <div class="row">
+        <button class="waves-effect blue waves-light btn-large" {{action 'guardar'}}>Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
